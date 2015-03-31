@@ -1,0 +1,117 @@
+<html>
+<head>
+<script src="css/source-sans-pro.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+<script id="home-tpl" type="text/x-handlebars-template">
+    <div class='header'>
+	 <a href='#'><img src="img/hamburger.png" alt="World Wide Web Consortium Home" width="72" height="46" border="0" /></a>
+	 <span class="heading">Project Sky Awesomeness</span>
+	 <input id="search" class='button header-button header-button-right' value='Search' type='image'/>
+	 </div> 
+	 
+	 <ul>
+	 
+	 <li><a href='#skybrowser'>Sky Browser</a></li>
+	 <li><a href='#charts'>Star Charts</a></li>
+	 <li><a href='#lessons'>Lessons</a></li>
+	 <li><a href='#achievements'>Achievements</a></li>
+	 <li><a href='#weather'>Weather</a></li>
+	 <li><a href='#news'>News</a></li>
+	 <li><a href='#camera'>Camera</a></li>
+	 <li><a href='#options'>Options</a></li>
+
+	 </ul>
+	<!-- <input class='search-key' type="search"/></div> -->
+    <!-- <div class="scroll"><ul class='employee-list'></ul></div> -->
+</script>
+
+<script id="news-tpl" type="text/x-handlebars-template">
+	<div class='header'>
+	 <a href='#' class="button header-button header-button-left">Back</a>
+	 <h1>Astronomy News</h1></div>
+</script>
+
+<script id="lessons-tpl" type="text/x-handlebars-template">
+	<div class='header'>
+	 <a href='#' class="button header-button header-button-left">Back</a>
+	 <h1>Lessons</h1></div>
+</script>
+
+<script id="achievements-tpl" type="text/x-handlebars-template">
+	<div class='header'>
+	 <a href='#' class="button header-button header-button-left">Back</a>
+	 <h1>Achievements</h1></div>
+</script>
+<script id="skybrowser-tpl" type="text/x-handlebars-template">
+	<div class='header'>
+	 <a href='#' class="button header-button header-button-left">Back</a>
+	 <h1>Sky Browser</h1></div>
+</script>
+<script id="charts-tpl" type="text/x-handlebars-template">
+	<div class='header'>
+	 <a href='#' class="button header-button header-button-left">Back</a>
+	 <h1>Star Charts</h1></div>
+</script>
+<script id="weather-tpl" type="text/x-handlebars-template">
+	<div class='header'>
+	 <a href='#' class="button header-button header-button-left">Back</a>
+	 <h1>Weather</h1></div>
+</script>
+<script id="camera-tpl" type="text/x-handlebars-template">
+	<div class='header'>
+	 <a href='#' class="button header-button header-button-left">Back</a>
+	 <h1>Lessons</h1></div>
+</script>
+<script id="options-tpl" type="text/x-handlebars-template">
+	<div class='header'>
+	 <a href='#' class="button header-button header-button-left">Back</a>
+	 <h1>Options</h1></div>
+</script>
+<!-- <script id="employee-li-tpl" type="text/x-handlebars-template">
+    {{#.}}
+    <li><a href="#employees/{{this.id}}">{{this.firstName}} {{this.lastName}}<br/>{{this.title}}</a></li>
+    {{/.}}
+</script>
+
+<script id="employee-tpl" type="text/x-handlebars-template">
+    <div class='header'><a href='#' class="button header-button header-button-left">Back</a><h1>Details</h1></div>
+    <div class='details'>
+    <img id='image' src='img/{{firstName}}_{{lastName}}.jpg' style="float:left;margin:10px;"/>
+    <h1>{{firstName}} {{lastName}}</h1>
+    <h2>{{title}}</h2>
+    <span class="location"></span>
+    <ul>
+    <li><a href="tel:{{officePhone}}">Call Office<br/>{{officePhone}}</a></li>
+    <li><a href="tel:{{cellPhone}}">Call Cell<br/>{{cellPhone}}</a></li>
+    <li><a href="sms:{{cellPhone}}">SMS<br/>{{cellPhone}}</a></li>
+    <li><a href="#" class="add-location-btn">Add Location</a></li>
+    <li><a href="#" class="add-contact-btn">Add to Contacts</a></li>
+    <li><a href="#" class="change-pic-btn">Change Picture</a></li>
+    </ul>
+    </div>
+</script> -->
+
+<script src="phonegap.js"></script>
+<script src="lib/jquery-1.8.2.min.js"></script>
+<script src="lib/handlebars.js"></script>
+<script src="js/storage/memory-store.js"></script>
+
+<script src="js/main.js"></script>
+
+<script src="js/LessonsView.js"></script>
+<script src="js/AchievementsView.js"></script>
+<script src="js/CameraView.js"></script>
+<script src="js/HomeView.js"></script>
+<script src="js/NewsView.js"></script>
+<script src="js/OptionsView.js"></script>
+<script src="js/SkyBrowserView.js"></script>
+<script src="js/StarChartView.js"></script>
+<script src="js/WeatherView.js"></script>
+
+
+
+</body>
+</html>
