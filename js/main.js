@@ -30,11 +30,9 @@ var app = {
             }
             return;
         }
-       /*  var match = hash.match(this.detailsURL); */
+
         if (hash == this.optionsURL) {
-/*             this.store.findById(Number(match[1]), function(employee) {
-                self.slidePage(new EmployeeView(employee).render());
-            }); */
+
 			self.slidePage(new OptionsView().render());
         }
 		
@@ -44,6 +42,12 @@ var app = {
 		if (hash == this.lessonsURL) {
 			self.slidePage(new LessonsView().render());
 		}
+        if (hash == this.northStarLessonURL) {
+            self.slidePage(new NorthLessonView().render());
+        }
+        if (hash == this.northStarBrowseURL) {
+            self.slidePage(new NorthView().render());
+        }
 		if (hash == this.cameraURL) {
 			self.slidePage(new CameraView().render());
 		}
@@ -113,6 +117,8 @@ var app = {
 		this.skyBrowserURL = '#skybrowser';
 		this.starChartURL = '#charts';
 		this.weatherURL = '#weather';
+		this.northStarLessonURL = '#lessons/northStar'
+		this.northStarBrowseURL = '#skybrowser/northStar'
 		
         this.registerEvents();
         this.store = new MemoryStore(function() {

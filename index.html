@@ -7,13 +7,15 @@
 <body>
 <script id="home-tpl" type="text/x-handlebars-template">
     <div class='header'>
-	 <a href='#'><img src="img/hamburger.png" alt="World Wide Web Consortium Home" width="72" height="46" border="0" /></a>
+	 <a class="header-link header-link-left" href='#'><img src="img/hamburger.png" width="72" height="46" border="0" /></a>
 	 <span class="heading">Project Sky Awesomeness</span>
-	 <input id="search" class='button header-button header-button-right' value='Search' type='image'/>
+	 <a class="header-link header-link-right" href='#'><img src="img/magnifier.png" width="40" height="40" border="0" /></a>
 	 </div> 
 	 
-	 <ul>
-	 
+	<div >
+
+	 <ul >
+	
 	 <li><a href='#skybrowser'>Sky Browser</a></li>
 	 <li><a href='#charts'>Star Charts</a></li>
 	 <li><a href='#lessons'>Lessons</a></li>
@@ -24,6 +26,7 @@
 	 <li><a href='#options'>Options</a></li>
 
 	 </ul>
+	</div>
 	<!-- <input class='search-key' type="search"/></div> -->
     <!-- <div class="scroll"><ul class='employee-list'></ul></div> -->
 </script>
@@ -32,43 +35,107 @@
 	<div class='header'>
 	 <a href='#' class="button header-button header-button-left">Back</a>
 	 <h1>Astronomy News</h1></div>
+	<div class='body'></div>
 </script>
 
 <script id="lessons-tpl" type="text/x-handlebars-template">
 	<div class='header'>
 	 <a href='#' class="button header-button header-button-left">Back</a>
 	 <h1>Lessons</h1></div>
+
+	<div class="lesson-home">
+	<h2>Moon</h1>
+	<ul>
+		<li><input type="checkbox" name="phases" checked>Phases</input></li>
+		<li><input type="checkbox" name="lunarEclipse" checked>Lunar Eclipse</input></li></ul>
+	<h2>Navigation</h2> 
+	<ul>
+	    <li><input type="checkbox" 
+				onclick="window.location.hash='#skybrowser/northStar'" name="northStar"></input>
+		<span onclick="window.location.hash='#lessons/northStar'">North Star</span></li>
+		<li><input type="checkbox" name="solarPosition">Solar Position</input></li></ul>
+	<h2>Earth</h2> 
+	<ul>
+		<li><input type="checkbox" name="seasons" ></input><label for="seasons>Seasons</label></li>
+		<li><input type="checkbox" name="year" >Year</input></li></ul>
+	<h2>Light Pollution</h2>
+	<ul>
+		<li><input type="checkbox" name="contributors">Contributors</input></li></ul>
+	</div>
+</script>
+
+<script id="northStarLesson-tpl" type="text/x-handlebars-template">
+	<div class='header'>
+	 <a href='#lessons' class="button header-button header-button-left">Back</a>
+	 <h1>North Star</h1></div>
+
+	<div><p>There is one star in the night sky that does not appear to move. It is called Polaris, or the North Star. “http://en.wikipedia.org/wiki/Pole_star”</p>
+<p>The easiest method for finding the North Star is by finding the Big Dipper. “http://en.wikipedia.org/wiki/Big_Dipper” Next you find the two stars on the end of the Big Dipper, the ones away from the handle. The North Star will always be five times the distance between these two stars in the direction that they point (up away from the pan). True north lies directly under this star.</p>
+
+<p>The Big Dipper's relationship with the North Star never changes and it will always dependably point the way to it.</p>
+
+<p>The constellation Cassiopeia is also very helpful in finding the North Star as it will always be on the opposite side of the North Star from the Big Dipper and often high in the sky, so can be used when the Big Dipper is low or obscured. “http://en.wikipedia.org/wiki/Cassiopeia_(constellation)”</p>
+
+<p>There is something about Polaris height above the horizon that is useful to know. Wherever you are in the northern hemisphere, the North Star will always be the same angle above the horizon as your current latitude. You can easily measure this by using your outstretched fist, which has an angle of around 10 degrees. Using both can estimate North and your current latitude.</p>
+
+http://www.naturalnavigator.com/find-your-way-using/stars
+</div>
+</script>
+
+<script id="northStarBrowse-tpl" type="text/x-handlebars-template">
+	<div class='header'>
+	 <a href='#lessons' class="button header-button header-button-left">Back</a>
+	 <h1>North Star</h1></div>
+
+	<div><img id='image' src="img/north_star_task.jpg" width="405" height="720" ></img> </div>
 </script>
 
 <script id="achievements-tpl" type="text/x-handlebars-template">
 	<div class='header'>
 	 <a href='#' class="button header-button header-button-left">Back</a>
 	 <h1>Achievements</h1></div>
+
+	<div></div>
 </script>
+
 <script id="skybrowser-tpl" type="text/x-handlebars-template">
 	<div class='header'>
 	 <a href='#' class="button header-button header-button-left">Back</a>
 	 <h1>Sky Browser</h1></div>
+
+	<div></div>
 </script>
+
 <script id="charts-tpl" type="text/x-handlebars-template">
 	<div class='header'>
 	 <a href='#' class="button header-button header-button-left">Back</a>
 	 <h1>Star Charts</h1></div>
+
+	<div></div>
 </script>
+
 <script id="weather-tpl" type="text/x-handlebars-template">
 	<div class='header'>
 	 <a href='#' class="button header-button header-button-left">Back</a>
 	 <h1>Weather</h1></div>
+
+	<div></div>
 </script>
+
 <script id="camera-tpl" type="text/x-handlebars-template">
 	<div class='header'>
 	 <a href='#' class="button header-button header-button-left">Back</a>
 	 <h1>Lessons</h1></div>
+
+	<div></div>
 </script>
+
 <script id="options-tpl" type="text/x-handlebars-template">
 	<div class='header'>
 	 <a href='#' class="button header-button header-button-left">Back</a>
 	 <h1>Options</h1></div>
+
+	<div></div>
 </script>
 <!-- <script id="employee-li-tpl" type="text/x-handlebars-template">
     {{#.}}
@@ -110,6 +177,8 @@
 <script src="js/SkyBrowserView.js"></script>
 <script src="js/StarChartView.js"></script>
 <script src="js/WeatherView.js"></script>
+<script src="js/NorthView.js"></script>
+<script src="js/NorthLessonView.js"></script>
 
 
 
