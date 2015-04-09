@@ -1,0 +1,30 @@
+{
+  "name": "rss-reader",
+  "version": "0.1.0",
+  "authors": [
+    "kristenmills <kristen@kristen-mills.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/rss-reader",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "core-ajax": "Polymer/core-ajax#~0.4.0",
+    "polymer": "Polymer/polymer#~0.4.0"
+  },
+  "_release": "0.1.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.1.0",
+    "commit": "43e5beaa4b7e946f48880462bb6c56ef05e1f277"
+  },
+  "_source": "git://github.com/kristenmills/polymer-rss.git",
+  "_target": "~0.1.0",
+  "_originalSource": "polymer-rss",
+  "_direct": true
+}

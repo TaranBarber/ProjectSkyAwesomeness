@@ -1,0 +1,35 @@
+{
+  "name": "display-rss",
+  "homepage": "https://github.com/beldar/display-rss",
+  "autors": [
+    "Martí Planellas <beldar.cat@gmail.com>"
+  ],
+  "description": "A Polymer element for fetching and displaying any RSS feed.",
+  "main": "display-rss.html",
+  "keywords": [
+    "web-component",
+    "web-components",
+    "polymer",
+    "rss reader",
+    "rss",
+    "feed"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "sass-bootstrap": "~3.0.0",
+    "platform": "Polymer/platform#~0.2.1",
+    "polymer": "Polymer/polymer#~0.2.1",
+    "polymer-jsonp": "Polymer/polymer-jsonp#~0.2.1"
+  },
+  "devDependencies": {},
+  "_release": "ffe7d61070",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "ffe7d61070b17a7e5413c055e07e2e64aabb4fb5"
+  },
+  "_source": "git://github.com/beldar/display-rss.git",
+  "_target": "*",
+  "_originalSource": "display-rss",
+  "_direct": true
+}
