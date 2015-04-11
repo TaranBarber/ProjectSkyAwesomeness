@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, inital-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <script src="bower_components/platform/platform.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <!-- jQuery UI CDN -->
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <!-- A jQuery UI CSS -->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+    <link rel="import" href="elements.html">
+    <link rel="stylesheet" href="app.css">
+</head>
+    
+<body fullbleed layout vertical>
+
+        
+    <script id="home-tpl" type="text/x-handlebars-template">
+	<core-drawer-panel id ="drawerPanel">
+
+    <core-header-panel drawer>
+        <core-toolbar>Menu</core-toolbar>
+            <core-menu>
+				<core-item icon="search" label ="Home"><a href = "#"></core-item>
+                <core-item icon="search" label ="Sky Browser"><a href = "#skybrowser"></core-item>
+                <core-item icon ="star" label = "Star Chart"><a href = "#charts"></core-item>
+                <core-item icon = "assessment" label = "Achievements"><a href = "#achievements"></core-item>
+				<core-item icon = "assessment" label = "Lessons"><a href = "#lessons"></core-item>
+                <core-item icon = "cloud" label = "Weather"><a href = "#weather"></core-item>
+                <core-item icon = "subject" label = "News"><a href = "#news"></core-item>
+                <core-item icon = "visibility" label = "Camera"><a href ="#camera"></a></core-item>
+            </core-menu>
+    </core-header-panel>
+
+    <core-header-panel main>
+    <core-toolbar>
+        <core-icon-button id="navicon" icon="menu"></core-icon-button>
+        <span center>Project Sky Awesomeness</span>
+        <core-icon-button id="search" icon="search" halign = "right"></core-icon-button>
+    </core-toolbar>
+
+    <div id="content"></div>
+    <div class ="welcome">
+        <paper-shadow z="5">
+            <h1>Test</h1>
+            <p>Testing the application in a way that loves the way you move</p>
+        </paper-shadow>
+    </div>
+            
+    <div class ="text">
+        <paper-shadow z="5">
+            <p>Testing the application in a way that loves the way you move</p>
+        </paper-shadow>
+    </div>
+    <div class ="text">
+        <paper-shadow z="5">
+            <p>Testing the application in a way that loves the way you move</p>
+        </paper-shadow>
+    </div>
+ 
+    </core-header-panel>
+    </script>
+    
+    <!-- News View -->
+    <script id="news-tpl" type="text/x-handlebars-template">
+	<core-drawer-panel id ="drawerPanel">
+
+    <core-header-panel drawer>
+        <core-toolbar>Menu</core-toolbar>
+            <core-menu>
+				<core-item icon="search" label ="Home"><a href = "#"></core-item>
+                <core-item icon="search" label ="Sky Browser"><a href = "#skybrowser"></core-item>
+                <core-item icon ="star" label = "Star Chart"><a href = "#charts"></core-item>
+                <core-item icon = "assessment" label = "Achievements"><a href = "#achievements"></core-item>
+				<core-item icon = "assessment" label = "Lessons"><a href = "#lessons"></core-item>
+                <core-item icon = "cloud" label = "Weather"><a href = "#weather"></core-item>
+                <core-item icon = "subject" label = "News"><a href = "#news"></core-item>
+                <core-item icon = "visibility" label = "Camera"><a href ="#camera"></a></core-item>
+            </core-menu>
+    </core-header-panel>
+
+    <core-header-panel main>
+    <core-toolbar>
+        <core-icon-button id="navicon" icon="menu"></core-icon-button>
+        <span center>Project Sky Awesomeness</span>
+        <core-icon-button id="search" icon="search" halign = "right"></core-icon-button>
+    </core-toolbar>
+test for color
+	<div id="accordion">
+	</div>
+    </core-header-panel>
+	</script>
+	
+	
+	<!-- Lessons View -->
+	<script id="lessons-tpl" type="text/x-handlebars-template">
+	<core-drawer-panel id ="drawerPanel">
+
+    <core-header-panel drawer>
+        <core-toolbar>Menu</core-toolbar>
+            <core-menu>
+				<core-item icon="search" label ="Home"><a href = "#"></core-item>
+                <core-item icon="search" label ="Sky Browser"><a href = "#skybrowser"></core-item>
+                <core-item icon ="star" label = "Star Chart"><a href = "#charts"></core-item>
+                <core-item icon = "assessment" label = "Achievements"><a href = "#achievements"></core-item>
+				<core-item icon = "assessment" label = "Lessons"><a href = "#lessons"></core-item>
+                <core-item icon = "cloud" label = "Weather"><a href = "#weather"></core-item>
+                <core-item icon = "subject" label = "News"><a href = "#news"></core-item>
+                <core-item icon = "visibility" label = "Camera"><a href ="#camera"></a></core-item>
+            </core-menu>
+    </core-header-panel>
+
+    <core-header-panel main>
+    <core-toolbar>
+        <core-icon-button id="navicon" icon="menu"></core-icon-button>
+        <span center>Project Sky Awesomeness</span>
+        <core-icon-button id="search" icon="search" halign = "right"></core-icon-button>
+    </core-toolbar>
+
+	<div>
+	<h2>Moon</h1>
+	<ul>
+		<li><input type="checkbox" name="phases" checked>Phases</input></li>
+		<li><input type="checkbox" name="lunarEclipse" checked>Lunar Eclipse</input></li></ul>
+	<h2>Navigation</h2> 
+	<ul>
+	    <li><input type="checkbox" 
+				onclick="window.location.hash='#skybrowser/northStar'" name="northStar"></input>
+		<span onclick="window.location.hash='#lessons/northStar'">North Star</span></li>
+		<li><input type="checkbox" name="solarPosition">Solar Position</input></li></ul>
+	<h2>Earth</h2> 
+	<ul>
+		<li><input type="checkbox" name="seasons" ></input><label for="seasons>Seasons</label></li>
+		<li><input type="checkbox" name="year" >Year</input></li></ul>
+	<h2>Light Pollution</h2>
+	<ul>
+		<li><input type="checkbox" name="contributors">Contributors</input></li></ul>
+	</div>
+    </core-header-panel>
+	</script>
+	
+    </core-drawer-panel>
+    
+	<script src="lib/handlebars.js"></script>
+	<script src="app.js"></script>
+	
+	<script src="js/LessonsView.js"></script>
+	<script src="js/AchievementsView.js"></script>
+	<script src="js/CameraView.js"></script>
+	<script src="js/HomeView.js"></script>
+	<script src="js/NewsView.js"></script>
+	<script src="js/OptionsView.js"></script>
+	<script src="js/SkyBrowserView.js"></script>
+	<script src="js/StarChartView.js"></script>
+	<script src="js/WeatherView.js"></script>
+	<script src="js/NorthView.js"></script>
+	<script src="js/NorthLessonView.js"></script>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>

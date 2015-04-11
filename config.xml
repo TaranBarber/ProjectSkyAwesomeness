@@ -1,20 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "org.coenraets.employeedirectory"
-        versionCode="10"
-        version   = "1.1.0">
+        id        = "ProjectSkyAwesomeness"
+        versionCode="13"
+        version   = "1.3.0">
 
     <!-- versionCode is optional and Android only -->
 
-    <name>Employee Directory</name>
+    <name>ProjectSkyAwesomeness</name>
 
     <description>
-        A simple employee directory application
+        A prototype of a sky learning application
     </description>
+<!--     <content src="index.html"/>
 
-    <author href="http://coenraets.org" email="ccoenraets@gmail.com">
-        Christophe Coenraets
-    </author>
-
+    <preference value="none" name="permissions"/>
+	<preference value="default" name="orientation"/>
+	<preference value="universal" name="target-device"/>
+	<preference value="true" name="fullscreen"/>
+	<preference value="true" name="webviewbounce"/>
+	<preference value="true" name="prerendered-icon"/>
+	<preference value="false" name="stay-in-webview"/>
+	<preference value="black-opaque" name="ios-statusbarstyle"/>
+	<preference value="true" name="detect-data-types"/>
+	<preference value="false" name="exit-on-suspend"/>
+	<preference value="true" name="show-splash-screen-spinner"/>
+	<preference value="true" name="auto-hide-splash-screen"/>
+	<preference value="false" name="disable-cursor"/>
+	<preference value="7" name="android-minSdkVersion"/>
+	<preference value="auto" name="android-installLocation"/> -->
 </widget>
