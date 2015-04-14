@@ -1,8 +1,0 @@
-<script type="text/javascript">
-navigator.camera.getPicture(function(imagePath){
-  document.getElementById("photoImg").setAttribute("src", imagePath);
-}, function(){
-  alert("Photo cancelled");
-}, {
-  destinationType: navigator.camera.DestinationType.FILE_URI
-});
