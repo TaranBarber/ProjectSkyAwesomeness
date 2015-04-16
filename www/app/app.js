@@ -57,12 +57,13 @@ angular.module('starApp', ['fsCordova', 'ui.router', 'ngResource'])
     	templateUrl: "pages/achievements.html"
     })
     .state('camera', {
-    	url: "/",
+    	url: "/camera",
     	templateUrl: "pages/camera.html"
     })
     .state('charts', {
-    	url: "/",
-    	templateUrl: "pages/charts.html"
+    	url: "/charts",
+    	templateUrl: "pages/charts.html",
+    	controller: "ChartsCtrl"
     })
     .state('lessons', {
     	url: "/lessons",

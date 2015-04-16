@@ -1,0 +1,16 @@
+
+<core-menu>
+	<core-icon-button onclick="window.location.hash='#options'">
+  		options</core-icon-button>
+	<paper-button raised active ng-click="rotate('-45')">
+		Left</paper-button>
+	<core-icon-button ng-click="rotate('45')">
+		Right</core-icon-button>
+</core-menu>
+<div rotate degrees='angle' 
+	class = 'round'
+	style = 'background-image: url(img/planisphere-BW.png);'>
+<!-- <core-image degrees='angle' rotate id='image'
+ style="width:400px; height:400px;" sizing="null"
+ src='img/planisphere-BW.png'> </core-image> -->
+</div>
