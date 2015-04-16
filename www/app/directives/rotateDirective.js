@@ -10,7 +10,8 @@ angular.module('starApp')
                     '-moz-transform': r,
                     '-webkit-transform': r,
                     '-o-transform': r,
-                    '-ms-transform': r
+                    '-ms-transform': r,
+                    'transform:': r
                 });
             });
         }

@@ -1,26 +1,28 @@
-<div style='background-color: #000000;'>
-<core-toolbar 
-	style='display: block;
-  			background-color: #888888;'>
-	<core-icon-button onclick="window.location.hash='#options'">
-  		options</core-icon-button>
-	
-	<core-icon-button icon="image:rotate-right" ng-click="rotate('45')"></core-icon-button>
-	<core-icon-button icon="image:rotate-left" ng-click="rotate('-45')"></core-icon-button>
+<core-toolbar style='display: block;background-color: #888888;'>
+	<core-icon-button icon="image:rotate-right" ng-click="rotate('15'); addTime(1);"></core-icon-button>
+	<core-icon-button icon="image:rotate-left" ng-click="rotate('-15'); subtractTime(1);"></core-icon-button>
+	<paper-button style='background: rgba(191,0,0,0);' raised toggle 
+	 ng-click="toggleVisionMode()" class="colored">Nightmode</paper-button>
+	 <h5>
+	 {{hour}}:00{{timePeriod}} - April 23rd, 2015</h3>
 </core-toolbar>
 
-<div rotate degrees='angle' 
-	style = 'background-image: url(img/planisphere-BW.png);
-		background-repeat: no-repeat;
-    background-position: 50%;
-    border-radius: 50%;
-/*     max-width: 100%;
-    max-height: 100%; */
-    width: 525px;
-    height: 725px;
-/*     overflow: hidden; */'>
-<!-- <core-image degrees='angle' rotate id='image'
- style="width:400px; height:400px;" sizing="null"
- src='img/planisphere-BW.png'> </core-image> -->
-</div>
+<div style='position:absolute; '>
+
+	
+	
+	<div ng-show="vision == 'daymode'" rotate degrees='angle' class='planisphere'
+	style='background-image: url("img/planisphere-BW.png");'>
+	</div>
+	
+	<div ng-show="vision == 'nightmode'" rotate degrees='angle' class='planisphere'
+	style='background-image: url("img/planisphere-RedBlack.png");'>
+	</div>
+	
+	<div class='oval'>
+	<span style='position: absolute; top:1%;'>E</span>
+	<span style='position: absolute; left:1%; top: 50%;'>S</span>
+	<span style='position: absolute; right:1%; top: 50%;'>N</span>
+	<span style='position: absolute; bottom: 1%;'>W</span>
+	</div>
 </div>
