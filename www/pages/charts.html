@@ -1,16 +1,26 @@
-
-<core-menu>
+<div style='background-color: #000000;'>
+<core-toolbar 
+	style='display: block;
+  			background-color: #888888;'>
 	<core-icon-button onclick="window.location.hash='#options'">
   		options</core-icon-button>
-	<paper-button raised active ng-click="rotate('-45')">
-		Left</paper-button>
-	<core-icon-button ng-click="rotate('45')">
-		Right</core-icon-button>
-</core-menu>
+	
+	<core-icon-button icon="image:rotate-right" ng-click="rotate('45')"></core-icon-button>
+	<core-icon-button icon="image:rotate-left" ng-click="rotate('-45')"></core-icon-button>
+</core-toolbar>
+
 <div rotate degrees='angle' 
-	class = 'round'
-	style = 'background-image: url(img/planisphere-BW.png);'>
+	style = 'background-image: url(img/planisphere-BW.png);
+		background-repeat: no-repeat;
+    background-position: 50%;
+    border-radius: 50%;
+/*     max-width: 100%;
+    max-height: 100%; */
+    width: 525px;
+    height: 725px;
+/*     overflow: hidden; */'>
 <!-- <core-image degrees='angle' rotate id='image'
  style="width:400px; height:400px;" sizing="null"
  src='img/planisphere-BW.png'> </core-image> -->
+</div>
 </div>

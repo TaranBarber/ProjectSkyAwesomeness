@@ -60,7 +60,6 @@ color: white;
 }
 
 
-
 [main]{
   background-color: whitesmoke;
 }
@@ -79,8 +78,5 @@ core-drawer-panel:not([narrow]} #navicon{
     border-radius: 50%;
     width: 800px;
     height: 800px;
-    overflow: hidden;
-}
-.round button {
-	
+/*     overflow: hidden; */
 }
