@@ -1,0 +1,154 @@
+<!--
+    x-weather
+    Description: A web component for querying the OpenWeatherMap API
+    Author: Ossama Edbali
+-->
+
+<!-- Imports: polymer, core-ajax and paper-progress -->
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/core-ajax/core-ajax.html">
+<link rel="import" href="../bower_components/paper-progress/paper-progress.html">
+
+<!-- 
+    Polymer element definition
+    Attributes
+    - idc: ID of the city (mandatory - without city)
+    - city: Name of the city (mandatory - without idc)
+    - country: Country code (optional)
+    - units: The unit system used (optional, default is internal, choices are 'metric' and 'imperial'
+-->
+<polymer-element name="x-weather" attributes="idc city country units">
+    <template>
+        <style>
+            :host {
+                display: block;
+                position: relative;
+                background-color: #def8a2;
+                border-bottom: 4px solid #afc778;
+                font-weight: 300;
+                width: 30%;
+            }
+            
+            .header {
+                padding: 5px 0px;
+                background-color: #637142;
+                color: #fafafa;
+            }
+            
+            .header h2 {
+                text-align: center;
+            }
+            
+            .content {
+                padding: 5px 30px;
+            }
+            
+            .content ul {
+               padding-left:20px;
+               text-indent:2px;
+               list-style: none;
+               list-style-position:outside;
+            }
+            
+            .content ul li {
+                margin: 0.5em 0 0 0;
+            }
+            
+            .content ul li:before
+            {
+                content: '✔';   
+                margin-left: -1em; margin-right: .100em;
+            }
+        </style>
+        
+        <!-- Core AJAX element for querying the API -->
+        <core-ajax
+                   auto
+                   url="{{url}}"
+                   handleAs="json"
+                   on-core-response="{{ajaxResponse}}"
+                   progress="{{progress}}"
+                   loading="{{loading}}"></core-ajax>
+        
+        <template if="{{loading}}">
+            <paper-progress indeterminate></paper-progress><br>
+        </template>
+        
+        <template if="{{!loading && response.cod === 200}}" bind="{{response}}">
+                <div class="header">
+                    <h2>{{name}} - {{sys.country}}</h2>
+                </div>
+                <div class="content">
+                    <ul>
+                        <li><b>Latitude:</b> {{coord.lat}}</li>
+                        <li><b>Longitude:</b> {{coord.lon}}</li>
+                        <li><b>Humidity:</b> {{main.humidity}}&#37;</li>
+                        <li><b>Pressure:</b> {{main.pressure}}</li>
+                        <li><b>Temperature:</b> {{main.temp}}</li>
+                        <li><b>Max. temperature:</b> {{main.temp_max}}</li>
+                        <li><b>Min. temperature:</b> {{main.temp_min}}</li>
+                        <li><b>Wind speed:</b> {{wind.speed}}</li>
+                        <li><b>Clouds:</b> {{clouds.all}}&#37;</li>
+                    </ul>
+                </div>
+        </template>
+        
+        <template if="{{!loading && response.cod === '404'}}" bind="{{response}}">
+            <div class="header">
+                    <h2>{{message}} - {{cod}}</h2>
+                </div>
+                <div class="content">
+                    <p>Please, try with setting the idc attribute or choose another city</p>
+                </div>
+        </template>
+    </template>
+    
+    <script>
+        var proto = {
+            prefix: 'http://api.openweathermap.org/data/2.5/weather?',
+            url: '',
+            loading: true,
+            
+            idc: undefined,
+            city: 'London',
+            country: undefined,
+            units: undefined,
+            
+            response: {},
+            build_request: function () {
+                if (this.idc !== undefined) {
+                    this.url = proto.prefix + "id=" + this.idc;
+                }
+                else {
+                    this.url = proto.prefix + "q=" + this.city;
+                    
+                    if (this.country !== undefined) {
+                        this.url += ("," + this.country);
+                    }
+                }
+                
+                if (this.units !== undefined)
+                    this.url += "&units=" + this.units;
+            },
+            
+            ajaxResponse: function(event, response) {
+                proto.loading = false;
+                
+                var data = response.response;
+                this.response = data;
+            },
+            
+            ready: function () {
+                proto.loading = true;
+                this.build_request();
+            },
+            
+            attributeChanged: function(attrName, oldVal, newVal) {
+                proto.loading = true;
+                this.build_request();
+            },
+        };
+        
+        Polymer('x-weather', proto);
+    </script>
+</polymer-element>

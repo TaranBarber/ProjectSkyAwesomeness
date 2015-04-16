@@ -74,7 +74,7 @@ angular.module('starApp', ['fsCordova', 'ui.router', 'ngResource'])
       controller: 'NewsCtrl'
     })
     .state('weather', {
-    	url: "/",
+    	url: "/weather",
     	templateUrl: "pages/weather.html",
     });
     
