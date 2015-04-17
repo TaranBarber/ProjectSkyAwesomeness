@@ -1,22 +1,23 @@
 <core-toolbar style='display: block;background-color: #888888;'>
 	<core-icon-button icon="image:rotate-right" ng-click="rotate('15'); addTime(1);"></core-icon-button>
 	<core-icon-button icon="image:rotate-left" ng-click="rotate('-15'); subtractTime(1);"></core-icon-button>
-	<paper-button style='background: rgba(191,0,0,0);' raised toggle 
+	<paper-button style='background: rgba(191,0,0,0); font-size:.5em;' raised toggle 
 	 ng-click="toggleVisionMode()" class="colored">Nightmode</paper-button>
-	 <h5>
-	 {{hour}}:00{{timePeriod}} - April 23rd, 2015</h3>
+	 <h5>{{hour}}:00{{timePeriod}} - April 23rd, 2015</h5>
 </core-toolbar>
 
-<div style='position:absolute; '>
+<div style='position:absolute;'>
 
 	
 	
 	<div ng-show="vision == 'daymode'" rotate degrees='angle' class='planisphere'
-	style='background-image: url("img/planisphere-BW.png");'>
+	style='background-image: url("img/planisphere-BW.png");
+			background-size: 443px 440px;'>
 	</div>
 	
 	<div ng-show="vision == 'nightmode'" rotate degrees='angle' class='planisphere'
-	style='background-image: url("img/planisphere-RedBlack.png");'>
+	style='background-image: url("img/planisphere-RedBlack.png");
+			background-size: 443px 440px;'>
 	</div>
 	
 	<div class='oval'>

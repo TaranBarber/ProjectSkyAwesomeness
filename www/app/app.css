@@ -64,6 +64,47 @@ color: white;
     background-position: 50%;
     border-radius: 50%;
     top: 3px;
+    width: 375px;
+    height: 375px;
+    z-index: 0;
+    position: relative;
+    -webkit-box-shadow: 0 0 2px 2px rgba(0,0,0,0.5) ;
+	box-shadow: 0 0 2px 2px rgba(0,0,0,0.5) ;
+	overflow:hidden;
+}
+
+.oval {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  float: left;
+  width: 256px;
+  height: 322px;
+  top: -349px;
+  bottom: 25px;
+  position: relative;
+  cursor: crosshair;
+  border: 3px dashed;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  font: normal 100%/normal Arial, Helvetica, sans-serif;
+  color:yellow;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: rgba(0,0,0,0);
+  -webkit-transform-origin: 38% 50% 0;
+  transform-origin: 38% 50% 0;
+  z-index: 0;
+
+}
+
+/* OLD
+*/
+/* .planisphere {
+	background-repeat: no-repeat;
+    background-position: 50%;
+    border-radius: 50%;
+    top: 3px;
     width: 750px;
     height: 750px;
     z-index: 0;
@@ -94,9 +135,9 @@ color: white;
   background: rgba(0,0,0,0);
   -webkit-transform-origin: 38% 50% 0;
   transform-origin: 38% 50% 0;
-  z-index: 2;
+  z-index: 0;
 
-}
+} */
 
 [main]{
   background-color: whitesmoke;

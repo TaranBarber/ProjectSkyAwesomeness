@@ -1,15 +1,15 @@
 <link rel="stylesheet" href="app/app.css">    
 
-<div class = lessons>
+<div class = 'lessons'>
 	<h1>Moon</h1>
 	<ul>
 		<li><input type="checkbox" name="phases" checked>Phases</input></li>
-		<li><input type="checkbox" name="lunarEclipse" checked>Lunar Eclipse</input></li></ul>
+		<li><input type="checkbox" name="lunarEclipse" checked>
+		<a data-ng-click="goToLesson('lessonTemplate.lunarEclipse')">Lunar Eclipse</a></input></li></ul>
 	<h1>Navigation</h1> 
 	<ul>
-	    <li><input type="checkbox" 
-				onclick="window.location.hash='#skybrowser/northStar'" name="northStar"></input>
-		<span onclick="window.location.hash='#lessons/northStar'">North Star</span></li>
+	    <li><input type="checkbox" name="northStar"></input>
+		<a data-ng-click="goToLesson('lessonTemplate.polaris')">North Star</a></li>
 		<li><input type="checkbox" name="solarPosition">Solar Position</input></li></ul>
 	<h1>Earth</h1> 
 	<ul>

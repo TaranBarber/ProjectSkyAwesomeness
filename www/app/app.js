@@ -67,7 +67,8 @@ angular.module('starApp', ['fsCordova', 'ui.router', 'ngResource'])
     })
     .state('lessons', {
     	url: "/lessons",
-    	templateUrl: "pages/lessons.html"
+    	templateUrl: "pages/lessons.html",
+    	controller: 'LessonsCtrl'
     })
     .state('news', {
       url: "/news",
@@ -77,6 +78,17 @@ angular.module('starApp', ['fsCordova', 'ui.router', 'ngResource'])
     .state('weather', {
     	url: "/weather",
     	templateUrl: "pages/weather.html",
+    })
+    .state('lessonTemplate', {
+    	url: "/lesson",
+    	templateUrl: "pages/lessonTemplate.html",
+    	controller: 'LessonCtrl'
+    })
+    .state('lessonTemplate.polaris', {
+    	templateUrl: "pages/lessonPages/polaris.html"
+    })
+    .state('lessonTemplate.lunarEclipse', {
+    	templateUrl: "pages/lessonPages/lunarEclipse.html"
     });
     
 /*  Example of state
