@@ -25,6 +25,12 @@ color: white;
 }
 
 
+A:link {text-decoration: none; color: white;}
+A:visited {text-decoration: none}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: red;}
+
+
 .welcome {
     padding: 3px;
     padding-left: 25px;
@@ -32,6 +38,18 @@ color: white;
     background: #666666;
     width: 310px;
     height: 200px;
+    margin: 7px;
+    box-shadow: 1px 1px 5px #888888;
+}
+
+.news {
+    text-decoration: none;
+    padding: 3px;
+    padding-left: 25px;
+    padding-right: 15px;
+    background: #666666;
+    width: 310px;
+    height: 350px;
     margin: 7px;
     box-shadow: 1px 1px 5px #888888;
 }
@@ -47,13 +65,18 @@ color: white;
     box-shadow: 1px 1px 5px #888888;
 }
 
-.lessons{
+ul{
     list-style-type: none;
+    font-family: "Robotodraft", sans-serif;
+    font-size: 16px;
+}
+
+.lessons{
     padding: 3px;
     padding-left: 25px;
     padding-right: 15px;
     background: #666666;
-    width: 330px;
+    width: 307px;
     height: 800px;
     margin: 7px;
     box-shadow: 1px 1px 5px #888888;
@@ -150,5 +173,7 @@ color: white;
 core-drawer-panel:not([narrow]} #navicon{
     display: none;
 }
+
+
 
 
