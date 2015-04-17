@@ -25,23 +25,12 @@ color: white;
 }
 
 
-.welcome {
-    padding: 3px;
-    padding-left: 25px;
-    padding-right: 15px;
-    background: #666666;
-    width: 330px;
-    height: 200px;
-    margin: 7px;
-    box-shadow: 1px 1px 5px #888888;
-}
-
 .text {
     padding: 3px;
     padding-left: 25px;
     padding-right: 15px;
     background: #666666;
-    width: 330px;
+    width: 310px;
     height: 150px;
     margin: 7px;
     box-shadow: 1px 1px 5px #888888;
@@ -53,7 +42,7 @@ color: white;
     padding-left: 25px;
     padding-right: 15px;
     background: #666666;
-    width: 330px;
+    width: 310px;
     height: 200px;
     margin: 7px;
     box-shadow: 1px 1px 5px #888888;
