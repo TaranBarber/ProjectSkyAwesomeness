@@ -106,6 +106,7 @@ angular.module('starApp')
   function($scope, CordovaService){
 
     $scope.ready = false;
+    $scope.currentLesson = '';
 
     // when cordova is ready
     CordovaService.ready.then(

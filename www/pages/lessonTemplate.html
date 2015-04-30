@@ -1,6 +1,14 @@
-<core-toolbar style='display: block;background-color: #888888;'>
-	<h5 ng-show='lesson'>{{lesson}}</h5>
-	<core-icon-button icon="arrow-back" ui-sref="lessons"></core-icon-button>
-	<core-icon-button><a href="http://en.m.wikipedia.org/wiki/Polaris">Wikipedia</a></paper-button>
+<core-toolbar style='background-color: #888888;'>
+	<h5 ng-show='lessonName'>{{lessonName}}</h5>
+	
+	<!-- TODO: Reconsider using buttons. Maybe a dropdown menu specifically for actions? -->
+	<core-icon-button icon="open-in-browser"><a href="http://en.m.wikipedia.org/wiki/Polaris">On the 
+Web</a></core-icon-button>
+	
+	<!-- TODO: Add symbol of a target -->
+	<core-icon-button icon="star"><a ui-sref="charts">In the Sky Chart</a></core-icon-button>
+	<!-- TODO: Add symbol of an article? -->
+	<core-icon-button icon="visibility"><a ui-sref="news">In the News</a></core-icon-button>
 </core-toolbar>
+
 <div style='position:absolute; background-color: #888888;' data-ui-view></div>
