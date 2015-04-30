@@ -1,3 +1,4 @@
+
 body {
     background: #fafafa;
     font-family: "Robotodraft", sans-serif;
@@ -35,11 +36,11 @@ A:hover {text-decoration: underline; color: red;}
     padding: 3px;
     padding-left: 25px;
     padding-right: 15px;
-    background: #666666;
+    background: black;
     width: 310px;
     height: 200px;
     margin: 7px;
-    box-shadow: 1px 1px 5px #888888;
+    box-shadow: 1px 1px 5px black;
 }
 
 .news {
@@ -47,22 +48,22 @@ A:hover {text-decoration: underline; color: red;}
     padding: 3px;
     padding-left: 25px;
     padding-right: 15px;
-    background: #666666;
+    background: black;
     width: 310px;
     height: 350px;
     margin: 7px;
-    box-shadow: 1px 1px 5px #888888;
+    box-shadow: 1px 1px 5px black;
 }
 
 .text {
     padding: 3px;
     padding-left: 25px;
     padding-right: 15px;
-    background: #666666;
+    background: black;
     width: 310px;
     height: 150px;
     margin: 7px;
-    box-shadow: 1px 1px 5px #888888;
+    box-shadow: 1px 1px 5px black;
 }
 
 ul{
@@ -75,7 +76,7 @@ ul{
     padding: 3px;
     padding-left: 25px;
     padding-right: 15px;
-    background: #666666;
+    background: black;
     width: 307px;
     height: 800px;
     margin: 7px;
